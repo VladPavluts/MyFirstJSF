@@ -14,15 +14,8 @@ import javax.faces.bean.SessionScoped;
 @SessionScoped
 public class Main implements Serializable {
 
-//    private static final String URL="jdbc:mysql://localhost:3306/mydb"+"?verifyServerCertificate=false"+
-//                    "&useSSL=false"+
-//                    "&requireSSL=false"+
-//                    "&useLegacyDatetimeCode=false"+
-//                    "&amp"+
-//                    "&serverTimezone=UTC";
-//    private static final  String USERNAME="root";
-//    private static final String PASSWORD="password";    
-    private ArrayList<SmartPhone> beans1 = new ArrayList<>();
+   
+    private ArrayList<SmartPhone> smartphones = new ArrayList<>();
 
     //@PostConstruct
     public String func() {
@@ -38,17 +31,26 @@ public class Main implements Serializable {
             Statement statement = null;
             statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM zerotable");
-            beans1.clear();
+            smartphones.clear();
             while (resultSet.next()) {
-                SmartPhone user = new SmartPhone();
-                user.setId(resultSet.getInt("id"));
-                user.setName(resultSet.getString("name"));
-                user.setPrice(resultSet.getInt("price"));
-                user.setChracteristic(resultSet.getString("characteristic"));
-                beans1.add(user);
+                SmartPhone smartPh = new SmartPhone();
+                smartPh.setId(resultSet.getInt("id"));
+                smartPh.setName(resultSet.getString("name"));
+                smartPh.setPrice(resultSet.getInt("price"));
+                smartPh.setChracteristic(resultSet.getString("characteristic"));
+                smartPh.setOperatingSystem(resultSet.getString("operatingSystem"));
+                smartPh.setScreenSize(resultSet.getString("screenSize"));
+                smartPh.setCPUproc(resultSet.getString("CPUproc"));
+                smartPh.setScreenSolution(resultSet.getString("screenSolution"));
+                smartPh.setRAM(resultSet.getString("RAM"));
+                smartPh.setFlashMemory(resultSet.getString("flashMemory"));
+                smartPh.setCamera(resultSet.getString("camera"));
+                smartPh.setBattery(resultSet.getString("battery"));
+                
+                smartphones.add(smartPh);
             }
-            for (int i = 0; i < beans1.size(); i++) {
-                System.out.println(beans1.get(i).toString());
+            for (int i = 0; i < smartphones.size(); i++) {
+                System.out.println(smartphones.get(i).toString());
             }
 
         } catch (SQLException e) {
@@ -57,34 +59,10 @@ public class Main implements Serializable {
         return "display";
     }
 
-//    public String func() throws SQLException {           
-//            
-//            Connection conn=null;
-//            conn=DriverManager.getConnection(URL,USERNAME,PASSWORD);
-//            Statement statement=conn.createStatement();
-//            ResultSet resultSet=statement.executeQuery("select * from zerotable");
-//            while(resultSet.next()){
-//                SmartPhone user=new SmartPhone();
-//                user.setId(resultSet.getInt("id"));
-//                user.setName(resultSet.getString("name"));
-//                user.setPrice(resultSet.getInt("price"));
-//                user.setChracteristic(resultSet.getString("characteristic"));
-//                beans1.add(user);
-//            }
-//            return "display";
-//            
-//    }
-    public ArrayList<SmartPhone> getBeans1() throws SQLException {
-        return beans1;
+
+    public ArrayList<SmartPhone> getSmartphones() throws SQLException {
+        return smartphones;
     }
 
-    public static void main(String[] args) throws SQLException {
-        Main obj = new Main();
-        obj.func();
-        ArrayList<SmartPhone> kkk = obj.getBeans1();
-        for (int i = 0; i < kkk.size(); i++) {
-            System.out.println(kkk.get(i).toString());
-        }
-
-    }
+    
 }

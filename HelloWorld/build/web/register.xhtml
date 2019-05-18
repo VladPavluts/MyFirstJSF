@@ -8,10 +8,10 @@
     <h:body>
         
         <h:form>
-            User Name<h:inputText value="#{loginbean.login}"></h:inputText><br></br>
-            Password<h:inputSecret value="#{loginbean.password}"></h:inputSecret><br></br>
+            User Name<h:inputText value="#{registrationBean.login}"></h:inputText><br></br>
+            Password<h:inputSecret value="#{registrationBean.password}"></h:inputSecret><br></br>
             
-            <h:commandButton action="#{loginbean.createUser()}" value="Register"></h:commandButton>
+            <h:commandButton action="#{registrationBean.signUp()}" value="Register"></h:commandButton>
         </h:form>
         
     </h:body>

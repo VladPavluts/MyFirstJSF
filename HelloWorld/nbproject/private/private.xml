@@ -3,10 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/osboxes/NetBeansProjects/MyFirstJSF/HelloWorld/src/java/common/Login.java</file>
             <file>file:/home/osboxes/NetBeansProjects/MyFirstJSF/HelloWorld/web/index.xhtml</file>
+            <file>file:/home/osboxes/NetBeansProjects/MyFirstJSF/HelloWorld/src/java/hibernate.cfg.xml</file>
             <file>file:/home/osboxes/NetBeansProjects/MyFirstJSF/HelloWorld/web/success.xhtml</file>
+            <file>file:/home/osboxes/NetBeansProjects/MyFirstJSF/HelloWorld/web/WEB-INF/web.xml</file>
             <file>file:/home/osboxes/NetBeansProjects/MyFirstJSF/HelloWorld/web/WEB-INF/faces-config.xml</file>
+            <file>file:/home/osboxes/NetBeansProjects/MyFirstJSF/HelloWorld/web/login.xhtml</file>
+            <file>file:/home/osboxes/NetBeansProjects/MyFirstJSF/HelloWorld/src/java/entity/Login.java</file>
+            <file>file:/home/osboxes/NetBeansProjects/MyFirstJSF/HelloWorld/src/java/service/SessionFactoryService.java</file>
+            <file>file:/home/osboxes/NetBeansProjects/MyFirstJSF/HelloWorld/web/register.xhtml</file>
+            <file>file:/home/osboxes/NetBeansProjects/MyFirstJSF/HelloWorld/src/java/cdi/LoginBean.java</file>
+            <file>file:/home/osboxes/NetBeansProjects/MyFirstJSF/HelloWorld/web/WEB-INF/glassfish-web.xml</file>
+            <file>file:/home/osboxes/NetBeansProjects/MyFirstJSF/HelloWorld/src/java/service/LoginService.java</file>
+            <file>file:/home/osboxes/NetBeansProjects/MyFirstJSF/HelloWorld/src/java/cdi/RegistrationBean.java</file>
         </group>
     </open-files>
 </project-private>

@@ -8,7 +8,8 @@
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">password</property>
     
-    <mapping class="common.Login"></mapping>
+    <mapping class="service.SessionFactoryService"></mapping>
+    <mapping class="entity.Login"></mapping>
     
   </session-factory>
 </hibernate-configuration>

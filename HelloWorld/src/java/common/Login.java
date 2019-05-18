@@ -59,8 +59,8 @@ public class Login implements Serializable{
             query.setString("login",login);
             query.setString("password",password);
             
+    
             List list=query.list();
-            System.out.println("list size= "+list.size());
             if(list.size()==1){
                 return true;
             }
@@ -73,5 +73,45 @@ public class Login implements Serializable{
         }
         return false;
         
+    }
+    
+//    public boolean createUser(){
+//        try{
+//            SessionFactory sessionFactory;
+//            sessionFactory = new Configuration().configure().buildSessionFactory();
+//            Session session=sessionFactory.openSession();
+//            session.beginTransaction();
+//            
+//            Query query=session.createQuery("from Login where login=:login and password=:password");
+//            query.setString("login",login);
+//            query.setString("password",password);
+//            boolean pr=false;
+//            List list=query.list();
+//            if(list.size()==1){
+//                pr=true;
+//            }               
+//            if(!pr){
+//            Login newUser=new Login();
+//            newUser.setLogin(login);
+//            newUser.setPassword(password);
+//            session.save(newUser);   
+//            return true;
+//            } else
+//            {
+//              return false;
+//            }
+//                                     
+//           
+//        }
+//        catch(Exception e){
+//            System.out.println(e);
+//        }        
+//        return false; 
+//    }
+    public String register(){
+        return "register.xhtml";
+    }
+    public String loginn(){
+        return "login.xhtml";
     }
 }

@@ -12,10 +12,7 @@ import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 import service.LoginService;
 
-/**
- *
- * @author osboxes
- */
+
 @Named
 @SessionScoped
 public class LoginBean implements Serializable{
@@ -42,7 +39,7 @@ public class LoginBean implements Serializable{
     
     
     public String loginn(){
-        return "login.xhtml";
+        return "index.xhtml";
     }
     
    public boolean chechUser(){

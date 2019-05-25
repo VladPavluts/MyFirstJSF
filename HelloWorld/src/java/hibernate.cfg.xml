@@ -7,9 +7,13 @@
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mydb?serverTimezone=UTC</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">password</property>
+    <property name="hibernate.hbm2ddl.auto">update</property>
     
     <mapping class="service.SessionFactoryService"></mapping>
     <mapping class="entity.Login"></mapping>
+    <mapping class="main.Order"></mapping>
+    <mapping class="main.Product"></mapping>
+    <mapping class="main.ProductInOrder"></mapping>
     
   </session-factory>
 </hibernate-configuration>

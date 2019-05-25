@@ -4,9 +4,71 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
         <title>Hello</title>
+        <h:outputStylesheet library="css" name="stylesheet.css"/>
+        
     </h:head>
     <h:body>
-        You have successfully logged in
+        <h:form>
+        <div id="top_bar_black"> 
+            <div id="logo_container"> 
+                <div class="logo_image">SmartShop</div>  
+                <div id="nav_block"> 
+                    <h:commandLink action="success.xhtml" value="Home" class="nav_button"></h:commandLink>
+                    <h:commandLink action="success.xhtml" value="Contact" class="nav_button"></h:commandLink>                    
+                    <div class="nav_button"> About</div>
+                    <div class="nav_button"> Links</div>
+                    
+                    
+                        <h:commandLink action="profile.xhtml" value="Profile" class="nav_buttonn"></h:commandLink>
+               
+                </div>
+            </div> 
+        </div>
+        <div id="content_container"></div>
+        <div>
+            <h:commandButton value="Создать заказ" action="#{orderBean.createOrder()}"/>
+            <h1>Созданные товары</h1>
+        <h:dataTable value="#{orderBean.getProducts()}" var="product">
+            <h:column>
+                <h:outputText value="#{product.name}"/>
+            </h:column>
+            <h:column>
+                <h:outputText value="#{product.price}"/>
+            </h:column>
+            <h:column>
+                <h:outputText value="#{product.amount}"/>
+            </h:column>
+            <h:column>
+                <h:commandButton value="Добавить" action="#{orderBean.addProduct(product)}"/>
+            </h:column>
+        </h:dataTable>
+            </div>
+
+
+
+
+            <div id="bottom_bar_black"> <div id="main_container">
+                    <div id="header_lower">  <div id="header_content_lowerline">Contact
+                            <div id="header_content_lowerboxcontent">Minsk<br />
+                                Hargary<br />
+                                Lingvillage<br />
+                                HG43 9HA <BR />
+                                vlad.pavluts@mail.ru<br />
+                                https://vk.com/id166191945<br />
+                                +375333196065<BR /> 
+                            </div>
+                        </div> 
+                    </div>
+
+                    
+
+                </div> 
+            </div>
+        </h:form>
+          
     </h:body>
 </html>
+
+
+
 

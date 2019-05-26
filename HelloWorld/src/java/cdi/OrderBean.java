@@ -25,7 +25,15 @@ public class OrderBean implements Serializable{
     
     @EJB
     private ProductsManagerBean productsManagerBean;
-    
+    private Product selectedProduct;
+
+    public Product getSelectedProduct() {
+        return selectedProduct;
+    }
+
+    public void setSelectedProduct(Product selectedProduct) {
+        this.selectedProduct = selectedProduct;
+    }
     private Order order;
     private String name;
     private int quantity;
@@ -61,6 +69,7 @@ public class OrderBean implements Serializable{
         return ordersManagerBean.getProductsInOrder(order.getId());
     }
     public void addProduct(Product product){
+        createOrder();
         if(order == null){
             return;
         }

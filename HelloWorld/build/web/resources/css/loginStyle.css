@@ -2,9 +2,13 @@
 *, *:after, *:before {
   box-sizing: border-box;
 }
-
-html, body {
-  background: #1a1f25;
+html {
+    background-image: url(images/usor1.jpg);
+  background-repeat: repeat;
+  background-attachment: scroll;
+}
+body {
+  
   font-family: 'Roboto', sans-serif;
 }
 
@@ -22,6 +26,7 @@ html, body {
 }
 
 form {
+    
   position: relative;
 }
 
@@ -37,7 +42,7 @@ form {
 
 .button {
   float: right;
-  color: #7f8084;
+  color: blue;
   border: 1px solid #22272d;
   padding: 7px 15px;
   border-radius: 3px;
@@ -46,7 +51,7 @@ form {
 }
 
 .button:hover {
-  color: #d3d3d3;
+  color: activeborder;
 }
 
 .lock {

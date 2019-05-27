@@ -75,6 +75,12 @@ public class OrderBean implements Serializable{
         }
         ordersManagerBean.addToOrder(product.getId(),order.getId(),product.getPrice(),1);
     }
+//    public void deleteProduct(Product product){
+//        if(order == null){
+//            return;
+//        }
+//        ordersManagerBean.deleteFromOrder(product.getId());
+//    }
     public void createOrder(){
         if(order == null){
             order = ordersManagerBean.createOrder();

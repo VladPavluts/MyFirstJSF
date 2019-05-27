@@ -33,7 +33,6 @@ public class OrdersManagerBean {
         session.beginTransaction();
         
         Query query = session.createQuery("from Product WHERE id = :productId ");
-        //Query query = session.createQuery("Select e FROM Product e WHERE e.id = :id");
         query.setInteger("productId", productId);        
         List<?> list = query.list();
         Product product = (Product)list.get(0);
@@ -43,7 +42,6 @@ public class OrdersManagerBean {
         }
 
         Query query1 = session.createQuery("from Order WHERE id = :orderId");
-        // Query query1 = session.createQuery("from Order WHERE order_id = :orderId");
         query1.setInteger("orderId", orderId);        
         List<?> list1 = query1.list();
         Order order = (Order)list1.get(0);
@@ -65,7 +63,20 @@ public class OrdersManagerBean {
 
         return true;
     }
-
+//    public boolean deleteFromOrder(int productId) {
+//        Session session = sessionFactoryService.getSession();
+//        session.beginTransaction();
+//        
+//        Query query = session.createQuery("delete from ProductInOrder WHERE product_id = :productId ");
+//        query.setInteger("productId", productId);        
+//        query.executeUpdate();
+//        session.getTransaction().commit();
+//
+//        
+//
+//        return true;
+//    }
+    
     public List<Product> getProductsInOrder(int orderId) {
         Session session = sessionFactoryService.getSession();
         session.beginTransaction();

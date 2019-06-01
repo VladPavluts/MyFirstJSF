@@ -42,7 +42,7 @@ public class LoginBean implements Serializable{
         return "index.xhtml";
     }
     
-   public boolean chechUser(){
+   public String chechUser(){
        return loginService.chechUser(login, password);
    }
    

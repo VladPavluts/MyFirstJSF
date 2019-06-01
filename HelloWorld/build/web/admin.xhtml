@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>AdminTools</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"></link>
+        <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css'></link>
+        <h:outputStylesheet library="css" name="loginStyle.css"/>
+    </h:head>
+    <h:body>
+        
+        <div class="wrapper">
+            <h:form>
+                <div class="header">
+                    <h4 class="sign-in">Create Product</h4>
+                    
+                </div>
+                <div class="clear"></div> 
+                <div>
+                   
+                      name:
+                    <h:inputText class="user-input" id="text" value="#{adminBean.name}"></h:inputText>
+                </div> 
+                <div>
+                 
+                      price:
+                    <h:inputText value="#{adminBean.price}" id="password11"></h:inputText>
+                </div> 
+                   <div>                   
+                      amount:
+                    <h:inputText value="#{adminBean.amount}" id="password1"></h:inputText>
+                </div> 
+                <div>
+                    <h:commandButton action="#{adminBean.addProductToDB()}" value="Create" id="submit"></h:commandButton>
+                </div>
+
+            </h:form>  
+        </div>
+
+             <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    </h:body>
+</html>
+

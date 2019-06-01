@@ -5,9 +5,9 @@
         <group>
             <file>file:/home/osboxes/NetBeansProjects/MyFirstJSF/HelloWorld/web/profile.xhtml</file>
             <file>file:/home/osboxes/NetBeansProjects/MyFirstJSF/HelloWorld/web/success.xhtml</file>
+            <file>file:/home/osboxes/NetBeansProjects/MyFirstJSF/HelloWorld/src/java/cdi/AdminBean.java</file>
             <file>file:/home/osboxes/NetBeansProjects/MyFirstJSF/HelloWorld/src/java/cdi/OrderBean.java</file>
-            <file>file:/home/osboxes/NetBeansProjects/MyFirstJSF/HelloWorld/src/java/service/OrdersManagerBean.java</file>
-            <file>file:/home/osboxes/NetBeansProjects/MyFirstJSF/HelloWorld/src/java/cdi/LoginBean.java</file>
+            <file>file:/home/osboxes/NetBeansProjects/MyFirstJSF/HelloWorld/web/WEB-INF/faces-config.xml</file>
         </group>
     </open-files>
 </project-private>

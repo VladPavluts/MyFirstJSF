@@ -13,12 +13,13 @@
         <h:form>
         <div id="top_bar_black"> 
             <div id="logo_container"> 
-                 <h:commandLink action="success.xhtml" value="SmartShop" class="logo_image"></h:commandLink> 
+                 <h:commandLink action="#{orderBean.redirecS()}" value="SmartShop" class="logo_image"></h:commandLink> 
                 <div id="nav_block"> 
-                    <h:commandLink action="success.xhtml" value="Home" class="nav_button"></h:commandLink>
+                    <h:commandLink action="#{orderBean.redirecS()}" value="Home" class="nav_button"></h:commandLink>
                     <div class="nav_button"> Contact</div>
                     <div class="nav_button"> About</div>
                     <div class="nav_button"> Links</div>
+                    <h:commandLink action="#{orderBean.redirecStart()}" value="Log out" class="nav_button"></h:commandLink>
                 </div>
             </div> 
         </div>
@@ -32,6 +33,7 @@
                 <f:facet name="description">
                     <p:graphicImage name="images/product/#{product.name}.jpg" width="40px" height="50px"/>
                 </f:facet>
+                <h:commandLink value="Delete" action="#{orderBean.deleteProduct(product)}"/>
             </p:dataList>
         </div>
 

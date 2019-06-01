@@ -63,19 +63,23 @@ public class OrdersManagerBean {
 
         return true;
     }
-//    public boolean deleteFromOrder(int productId) {
-//        Session session = sessionFactoryService.getSession();
-//        session.beginTransaction();
-//        
-//        Query query = session.createQuery("delete from ProductInOrder WHERE product_id = :productId ");
-//        query.setInteger("productId", productId);        
-//        query.executeUpdate();
+    public boolean deleteFromOrder(int productId) {
+        Session session = sessionFactoryService.getSession();
+        session.beginTransaction();
+        
+//        ProductInOrder itemDelete=(ProductInOrder)session.get(ProductInOrder.class, productId);
+//        session.delete(itemDelete);
 //        session.getTransaction().commit();
-//
-//        
-//
-//        return true;
-//    }
+        Query query = session.createQuery("delete from ProductInOrder WHERE product_id = :productId ");
+        query.setInteger("productId", productId);        
+        query.executeUpdate();
+        session.getTransaction().commit();
+        //getProductsInOrder(orderId);
+        
+
+        return true;
+    }
+    
     
     public List<Product> getProductsInOrder(int orderId) {
         Session session = sessionFactoryService.getSession();

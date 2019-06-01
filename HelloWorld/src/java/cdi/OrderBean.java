@@ -75,12 +75,13 @@ public class OrderBean implements Serializable{
         }
         ordersManagerBean.addToOrder(product.getId(),order.getId(),product.getPrice(),1);
     }
-//    public void deleteProduct(Product product){
-//        if(order == null){
-//            return;
-//        }
-//        ordersManagerBean.deleteFromOrder(product.getId());
-//    }
+    public boolean deleteProduct(Product product){
+        if(order == null){
+            return false;
+        }
+        ordersManagerBean.deleteFromOrder(product.getId());
+        return true;
+    }
     public void createOrder(){
         if(order == null){
             order = ordersManagerBean.createOrder();
@@ -89,7 +90,15 @@ public class OrderBean implements Serializable{
     public List<Product> getProducts(){
         return productsManagerBean.getProducts();
     }
-    
+    public boolean redirec(){
+        return true;
+    }
+    public boolean redirecS(){
+        return true;
+    }
+    public boolean redirecStart(){
+        return true;
+    }
     
     
 }

@@ -13,15 +13,15 @@
         <h:form id="form">
         <div id="top_bar_black"> 
             <div id="logo_container"> 
-                <h:commandLink action="success.xhtml" value="SmartShop" class="logo_image"></h:commandLink>
+                <h:commandLink action="#{orderBean.redirecS()}" value="SmartShop" class="logo_image"></h:commandLink>
                 
                 <div id="nav_block"> 
-                    <h:commandLink action="success.xhtml" value="Home" class="nav_button"></h:commandLink>
+                    <h:commandLink action="#{orderBean.redirecS()}" value="Home" class="nav_button"></h:commandLink>
                     <div class="nav_button"> Contact</div>
                     <div class="nav_button"> About</div>
                     <div class="nav_button"> Links</div>                  
                     
-                        <h:commandLink action="profile.xhtml" value="Profile" class="nav_buttonn"></h:commandLink>
+                    <h:commandLink action="#{orderBean.redirec()}" value="Profile" class="nav_buttonn"></h:commandLink>
                
                 </div>
             </div> 
